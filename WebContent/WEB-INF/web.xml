@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TodoListApp</display-name>
+  <filter>
+    <filter-name>CorsFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CorsFilter</filter-name>
+    <url-pattern>*</url-pattern>
+  </filter-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>Addtask</servlet-name>
+    <servlet-class>AddTask</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Addtask</servlet-name>
+    <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetList</servlet-name>
+    <servlet-class>getList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetList</servlet-name>
+    <url-pattern>/List</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetOneTask</servlet-name>
+    <servlet-class>getOneTask</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetOneTask</servlet-name>
+    <url-pattern>/getTask</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateTask</servlet-name>
+    <servlet-class>Update</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateTask</servlet-name>
+    <url-pattern>/taskUpdate</url-pattern>
+  </servlet-mapping>
+</web-app>
